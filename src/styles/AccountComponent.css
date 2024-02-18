@@ -1,0 +1,34 @@
+/* AccountComponent.css */
+
+.account-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(218, 214, 214);
+    margin-bottom: 12px;
+  }
+  
+  .account-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  
+  .input-field {
+    margin-left: 10px; /* Add margin for spacing between the icon and input field */
+  }
+  
+  .action-icons {
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+    /* background-color: rgb(218, 214, 214); */
+  }
+  
+  /* Add additional styling as needed */
+  

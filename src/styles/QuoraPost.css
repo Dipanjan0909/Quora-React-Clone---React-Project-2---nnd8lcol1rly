@@ -1,0 +1,89 @@
+/* QuoraPost.css */
+
+.quora-post {
+    border: 1px solid #ddd; /* Border for the post container */
+    padding: 12px;
+    width: fit-content; /* Set a fixed width or adjust as needed */
+    margin-bottom: 8px;
+  }
+  
+  .post-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .author-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .author-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .author-name {
+    font-weight: bold;
+  }
+  
+  .channel-name {
+    color: #777;
+  }
+  
+  .post-content {
+    margin-top: 10px;
+  }
+  
+  .post-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .post-text {
+    color: #333;
+  }
+  
+  .post-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+  }
+  
+  .post-images img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 5px;
+  }
+  
+  .post-footer {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .channel-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .interaction-counts {
+    /* display: flex; */
+    /* flex-direction: row; */
+    color: #777;
+    font-size: 12px;
+    /* justify-content: space-evenly; */
+    gap: 36px;
+  }
+  
+  .like-count,
+  .comment-count {
+    margin-right: 10px;
+    /* border: none; */
+    border-radius: 8px;
+  }
+  
