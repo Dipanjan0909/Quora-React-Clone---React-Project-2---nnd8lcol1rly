@@ -50,6 +50,7 @@ function App() {
                 channelName: item.channel.name,
                 channelImage: item.channel.image,
                 likeCount: item.likeCount,
+                dislikeCount: item.dislikeCount,
                 commentCount: item.commentCount,
               };
               return (

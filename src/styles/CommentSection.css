@@ -1,0 +1,25 @@
+/* CommentSection.css */
+
+.comment-section {
+    margin-top: 20px;
+  }
+  
+  .comments-list {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .comment {
+    margin-bottom: 15px;
+  }
+  
+  .comment-user {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .comment-content {
+    padding-left: 10px;
+  }
+  

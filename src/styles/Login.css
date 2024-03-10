@@ -8,19 +8,19 @@ html {
 }
 
 .background {
-  /* background: url('background-image.jpg') no-repeat center center fixed; */
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: 100vh; */
+  height: 100vh; /* Adjusted to cover the entire viewport height */
 }
 
 .container {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 8px;
-  width: 300px;
+  width: 90%; /* Adjusted to take up 90% of the viewport width */
+  max-width: 400px; /* Added max-width to limit container width */
   text-align: center;
 }
 
@@ -56,4 +56,17 @@ html {
 
 .form-group button:hover {
   background-color: #45a049;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+    max-width: 300px; /* Adjusted max-width for smaller screens */
+  }
+
+  .form-group button {
+    margin-right: 0; /* Remove margin-right for buttons on smaller screens */
+    margin-bottom: 10px; /* Add bottom margin for better spacing */
+  }
 }

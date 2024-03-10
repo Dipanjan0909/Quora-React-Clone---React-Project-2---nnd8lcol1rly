@@ -3,6 +3,9 @@ import "../styles/QuoraPost.css";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import CommentIcon from "@mui/icons-material/Comment";
+import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
+import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
+import CommentSection from "./CommentSection";
 
 const QuoraPost = ({
   authorName,
@@ -13,10 +16,15 @@ const QuoraPost = ({
   channelName,
   channelImage,
   likeCount,
+  dislikeCount,
   commentCount,
 }) => {
   const [likeClicked, setLikeClicked] = React.useState(false);
+  const [dislikeClicked, setDisLikeClicked] = React.useState(false);
   const [likeCounter, setLikeCounter] = React.useState(likeCount);
+  const [dislikeCounter, setDislikeCounter] = React.useState(dislikeCount);
+  const [commentIconclicked,setCommentIconclicked] = React.useState(false);
+
   return (
     <div className="quora-post">
       <div className="post-header">
@@ -60,9 +68,22 @@ const QuoraPost = ({
             {likeCounter}{" "}
             {likeClicked ? <ThumbUpAltIcon /> : <ThumbUpOffAltIcon />}{" "}
           </button>
-          <button className="comment-count">
+          <button
+            className="like-count"
+            onClick={() => {
+              setDisLikeClicked(!dislikeClicked);
+              dislikeClicked
+                ? setDislikeCounter((prev) => prev - 1)
+                : setDislikeCounter((prev) => prev + 1);
+            }}
+          >
+            {dislikeCounter}{" "}
+            {dislikeClicked ? <ThumbDownAltIcon /> : <ThumbDownOffAltIcon />}{" "}
+          </button>
+          <button className="comment-count" onClick={()=>setCommentIconclicked(!commentIconclicked)}>
             {commentCount} <CommentIcon />
           </button>
+          {commentIconclicked && <CommentSection/>}
         </div>
       </div>
     </div>
